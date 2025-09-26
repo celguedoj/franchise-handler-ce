@@ -41,3 +41,8 @@ La aplicación escucha en: **http://localhost:8080**
 
 
 ## Puedes encontrar el archivo de postman en el repositorio
+
+## Ejecutar test:
+En la carpeta del proyecto:
+- **Windows** `mvnw.cmd test`
+- **Linux/Mac** `./mvnw test`
