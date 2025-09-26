@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "7045ea11-7467-428d-b03c-2abe669ec209",
+		"name": "accenture-franchises-handler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39035799"
+	},
+	"item": [
+		{
+			"name": "franchises",
+			"item": [
+				{
+					"name": "Get all franchises",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/franchises",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all franchise by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get max stock franchise by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/top-products",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"top-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create franchise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yeremis MC Donalds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update name franchise",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carlos MCDonalds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "branches",
+			"item": [
+				{
+					"name": "Create Get branches into franchise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create branch into franchise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sucursal 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update branch into franchise",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sucursal 11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Create product into branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Producto 2\",\r\n    \"stock\": 40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}/products",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products into branch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}/products",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product name into branch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Producto 11\",\r\n    \"stock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}/products/{{productID}}",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}",
+								"products",
+								"{{productID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product stock into branch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}/products/{{productID}}/stock",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}",
+								"products",
+								"{{productID}}",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product name into branch",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Producto 11\",\r\n    \"stock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/franchises/{{franchiceID}}/branches/{{branchID}}/products/{{productID}}",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"franchises",
+								"{{franchiceID}}",
+								"branches",
+								"{{branchID}}",
+								"products",
+								"{{productID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "franchiceID",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "branchID",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "productID",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
