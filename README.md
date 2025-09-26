@@ -40,7 +40,8 @@ La aplicación escucha en: **http://localhost:8080**
 - **GET** `/api/franchises/{franchiseId}/top-products` → obtiene el producto con mayor stock en cada sucursal
 
 
-## Puedes encontrar el archivo de postman en el repositorio
+## Puedes encontrar el archivo de postman en este repositorio:
+"accenture-franchises-handler.postman_collection.json"
 
 ## Ejecutar test:
 En la carpeta del proyecto:
